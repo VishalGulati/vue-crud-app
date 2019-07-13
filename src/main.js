@@ -4,6 +4,8 @@ import 'vuetify/dist/vuetify.min.css';
 import App from './App.vue';
 import store from './store';
 import router from './router';
+import VueNativeSock from 'vue-native-websocket';
+Vue.use(VueNativeSock, 'ws://localhost:3000', { store: store, format: 'json' });
 
 Vue.use(Vuetify);
 
